@@ -14,6 +14,7 @@ const isValid = function (value) {
 }
 // ---------------------FIRST API REGISTER COLLEGE
 const registercollege = async function (req, res) {
+  res.setHeader('Access-Control-Allow-Origin','*')
   try {
     const requestBody = req.body;
     if (!isValidRequestBody(requestBody)) {
@@ -53,6 +54,7 @@ module.exports.registercollege = registercollege
 
 //----------------SECOND API CREATE INTERN 
 const createintern = async function (req, res) {
+  res.setHeader('Access-Control-Allow-Origin','*')
   try {
     const requestBody = req.body;
 
